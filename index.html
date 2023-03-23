@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Boryspil Games</title>
+  <link rel=icon href="img/icon.png" type=»image/png»>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span><img src="img/icon.png" alt="" width="50px"></span>
+    </div>
+    <div id="about">
+      <a href="#" title="" onclick="slowScroll('#overview')">Трейлер</a>
+      <a href="#" onclick="slowScroll('#main')">Про гру</a>
+      <a href="#" onclick="slowScroll('#start')">Почати грати</a>
+      <a href="#" onclick="slowScroll('#footer')">Зв'язок з нами</a>
+    </div>
+  </header>
+
+  <div id="overview">
+    <div class="img">
+        <iframe width="350" height="250" src="https://www.youtube.com/embed/l6uvqv3J8L0" title="BORYSPILCHANY - RELEASE TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <span>Трейлер</span>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Дорогий гравець!</h2>
+    </div>
+    <div class="text">
+      <span>Вітаємо Вас на Вашій новій посаді. <br>
+        Відтепер Ви - мер міста. <br> <br>
+        У Ваші обов'язки входить: слідкувати за кількістю та виробництвом їжі, ресурною базою та екологією. <br>
+        Також не забувайте давати розпорядження мешканцям міста. <br>
+        Вони чудові жителі, правда, час від часу можуть створювати маленькі неприємності. <br> <br> 
+        Ви обов'язково впораєтесь. <br>
+        Бажаємо успіху на новій роботі!!</span>
+    </div>
+  </div>
+
+  <div id="start">
+    <h1>Починайте грати вже прямо зараз! <br> <br>
+    Тисніть нижче на "Грати!", завантажуйте гру та врешті-решт ставайте мером свого міста! <br> <br> <br>
+    <a href="https://play.google.com/store/apps/details?id=com.BoryspilGameStudio.Boryspilchany">Грати!</a> </h1>
+  </div>
+
+  <div id="footer">
+    <div class="intro">
+      <h2>Навігація по сайту: <br> <br>
+        <a href="#" title="" onclick="slowScroll('#overview')" style="text-decoration: none;">Трейлер</a> <br>
+        <a href="#" onclick="slowScroll('#main')" title="about" style="text-decoration: none;">Про гру</a> <br>
+        <a href="#" onclick="slowScroll('#start')" title="start" style="text-decoration: none;">Почати грати</a> <br>
+        <a href="#" onclick="slowScroll('#footer')" title="footer" style="text-decoration: none;">Зв'язок з нами</a> <br>
+    </h2>
+    </div>
+    <div class="text">
+      <h2>Електронна пошта: <br> shatyloartem@gmail.com <br> <br> Телефон: <br> <a href="tel:+380953667586" style="text-decoration: none;">+380953667586</a> <br> <br> <a href="https://doc-hosting.flycricket.io/boryspilchany-privacy-policy/0f87cc6f-5b5c-44de-bd0b-410c4b8fe34b/privacy">Конфіденційність</a></h2>
+    </div>
+  </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
